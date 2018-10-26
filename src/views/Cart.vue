@@ -53,9 +53,7 @@
         ]
       }
     },
-    methods:{
-
-    },
+    methods:{},
     components:{
       TwoLines,
       OrderListItem
