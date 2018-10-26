@@ -22,15 +22,21 @@
             <p class="name ellipsis">{{good.name}}</p>
             <p class="price ellipsis">&yen;{{good.price}}</p>
             <div class="counter ellipsis">
-              <span class="sm-box minus" @click="good.count>1?good.count--:cartGoodsList.splice(index,1)">-</span>
+              <span class="sm-box minus" @click="cartGoodHandler('minus',index)">-</span>
               <span class="sm-box count">{{good.count}}</span>
-              <span class="sm-box add" @click="good.count++">+</span>
+              <span class="sm-box add" @click="cartGoodHandler('add',index)">+</span>
             </div>
           </div>
-          <svg @click="cartGoodsList.splice(index,1)" class="icon delete-icon" aria-hidden="true">
+          <svg @click="cartGoodHandler('delete',index)" class="icon delete-icon" aria-hidden="true">
             <use xlink:href="#icon-trash-o"></use>
           </svg>
         </div>
+      </div>
+      <div class="checkout-footer">
+        <p class="checkout-info">
+          共&nbsp;{{totalCount}}&nbsp;件&nbsp;总计：<span class="totalPrice">&yen;{{totalPrice}}</span>
+        </p>
+        <p class="checkout-button">结算</p>
       </div>
     </div>
   </div>
@@ -49,11 +55,49 @@
             name:"男士雪莲贴",
             price:"168.00",
             count: 2
+          },
+          {
+            selected:true,
+            img:"/assets/img/piku_05.png",
+            name:"女士雪莲贴",
+            price:"69.00",
+            count: 3
+          },
+          {
+            selected:true,
+            img:"/assets/img/piku_05.png",
+            name:"卫生巾",
+            price:"28.00",
+            count: 5
           }
         ]
       }
     },
-    methods:{},
+    computed:{
+      totalCount(){
+        return this.cartGoodsList.reduce((prev,current)=>current.selected?prev+current.count:prev+0,0)
+      },
+      totalPrice(){
+        return this.cartGoodsList.reduce((prev,current)=>current.selected?prev+current.count*current.price:prev+0,0)
+      }
+    },
+    methods:{
+      cartGoodHandler(type,index){
+        let cartGoodsList=this.cartGoodsList
+        let good=this.cartGoodsList[index]
+        switch (type){
+          case "minus":
+            good.count>1?good.count--:cartGoodsList.splice(index,1)
+            return
+          case "add":
+            good.count++
+            return
+          case "delete":
+            cartGoodsList.splice(index,1)
+            return
+        }
+      }
+    },
     components:{
       TwoLines,
       OrderListItem
@@ -95,6 +139,7 @@
         padding-left ex(20)
     .goods-cart-con
       height 100vh
+      position relative
       box-sizing border-box
       padding-bottom ex(108)
       .cart-goods-list
@@ -149,4 +194,27 @@
             font-size ex(50)
             color #e4e4e4
             margin-left ex(10)
+      .checkout-footer
+        position absolute
+        bottom ex(108)
+        left 0
+        height ex(100)
+        z-index 10
+        line-height ex(100)
+        width 100%
+        box-shadow: 0 ex(5) ex(5) #eee
+        .checkout-info
+          background-color: #fff;
+          display inline-block
+          width 70%
+          height 100%
+          .totalPrice
+            color red
+        .checkout-button
+          display inline-block
+          width 30%
+          height 100%
+          color white
+          text-align center
+          background-color: #ff5579;
 </style>
