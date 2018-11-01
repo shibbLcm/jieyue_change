@@ -11,6 +11,9 @@ import Order from "./views/Order.vue"
 import Member from "./views/Member.vue"
 import Integral from "./views/Integral.vue"
 import Logistics from "./views/Logistics.vue"
+import Login from "./views/Login.vue"
+import Register from "./views/Register.vue"
+import RetrievePwd from "./views/RetrievePwd.vue"
 
 Vue.use(Router)
 
@@ -75,7 +78,24 @@ export default new Router({
     {
       path: '/layoutbase',
       name: 'layoutbase',
-      component: LayoutBase
+      component: LayoutBase,
+      children:[
+        {
+          path: 'login',
+          name: 'login',
+          component: Login
+        },
+        {
+          path: 'register',
+          name: 'register',
+          component: Register
+        },
+        {
+          path: 'retrievepwd',
+          name: 'retrievepwd',
+          component: RetrievePwd
+        }
+      ]
     },
     {
       path:"/",

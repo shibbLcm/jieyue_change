@@ -1,0 +1,582 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.none {
+    display: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    border: none;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    font-family: "Microsoft YaHei", serif;
+    font-size: .24rem;
+}
+
+input {
+    font-family: "Microsoft YaHei", serif;
+    font-size: .24rem;
+    outline: none;
+}
+
+input[type="button"], input[type="submit"], input[type="reset"] {
+    -webkit-appearance: none;
+}
+
+.button {
+    border-radius: 0;
+}
+
+textarea {
+    -webkit-appearance: none;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: Black;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+textarea {
+    outline: none;
+    resize: none;
+    font-family: 'Microsoft YaHei', serif;
+    font-size: .24rem;
+}
+
+.imgbox img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.bigMain {
+    padding-bottom: 1.05rem;
+    background-color: #eeeeee;
+}
+
+.flexb {
+    margin-bottom: .1rem;
+    display: flex;
+    align-items: center;
+}
+
+.grayBD {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    padding-top: .95rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.titleBD {
+    width: 100%;
+    height: 100%;
+    /*background: url(../img/login_bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;*/
+    padding-top: .95rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.titleHD {
+    height: .95rem;
+    line-height: .92rem;
+    border-bottom: .03rem solid #dddddf;
+    background-color: #f7f7f7;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.titleBack {
+    width: .92rem;
+    height: .92rem;
+    /*background: url("../img/icn_jy_fh.png") no-repeat center center;
+    background-size: .22rem;*/
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.titleText {
+    font-size: .34rem;
+}
+
+.footerMenuBox {
+    width: 100%;
+    height: 1rem;
+    /*background: url("../img/img_jy_sy_dhl.jpg") no-repeat left center;
+    background-size: 100%;*/
+    background-color: #000;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+.ftMenu {
+    width: 20%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    color: #af8f39;
+
+    font-size: .22rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ftMenu .icon {
+    font-size: 28px;
+}
+
+.ftMenu.tuiguang .icon {
+    font-size: 23px;
+}
+
+.ftMenu.mine .icon {
+    font-size: 23px;
+}
+
+/*.ftMenu.index {
+  background: url("../img/icn_jy_sy_dhl_sy.png") center .13rem no-repeat;
+  background-size: .45rem;
+}*/
+
+.ftMenu.index.active {
+    color: white;
+    background-color: #af8f39;
+}
+
+/*.ftMenu.gwc {
+  background: url("../img/icn_jy_sy_dhl_gwc.png") center .13rem no-repeat;
+  background-size: .45rem;
+}*/
+
+.ftMenu.gwc.active {
+    color: white !important;
+    background-color: #af8f39;
+}
+
+/*.ftMenu.tuiguang {
+  background: url("../img/icn_jy_sy_dhl_tg.png") center .13rem no-repeat;
+  background-size: .45rem;
+}*/
+
+.ftMenu.tuiguang.active {
+    color: white !important;
+    background-color: #af8f39;
+}
+
+/*.ftMenu.mine {
+  background: url("../img/icn_jy_sy_dhl_wd.png") center .13rem no-repeat;
+  background-size: .45rem;
+}*/
+
+.ftMenu.mine.active {
+    color: white;
+    background-color: #af8f39;
+}
+
+.scrollBD {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-bottom: 1.15rem;
+}
+
+.gwcBD {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-bottom: .7rem;
+}
+
+.spDetailBD {
+    padding-top: .95rem;
+    padding-bottom: 1rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.gwcFt {
+    background-color: #fff;
+    position: fixed;
+    left: 0;
+    bottom: 1rem;
+    width: 100%;
+    height: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.gwcFt_Info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: .3rem;
+    color: #6e6e6e;
+    font-size: .28rem;
+}
+
+.pink {
+    color: #ED1709;
+}
+
+.mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    opacity: .5;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 1;
+    display: none;
+    /*pointer-events: none; !*���ܲ���*!*/
+}
+
+.pay-method-container {
+    width: 100%;
+    height: 158px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    transform: translateY(158px);
+    transition: .5s transform,.5s -webkit-transform;
+    -webkit-transform: translateY(158px);
+    -webkit-transition: .5s -webkit-transform;
+}
+
+.title, .pay-by-alipay, .pay-by-weixin, .submit-order-button {
+    width: 100%;
+    height: 33.3333%;
+    border-bottom: 2px solid #dbdbdb;
+}
+
+.pay-by-alipay, .pay-by-weixin {
+    display: flex;
+    align-items: center;
+}
+
+.pay-by-alipay .icon, .pay-by-weixin .icon {
+    margin: 0 15px 0 15px;
+}
+
+.title {
+    font-size: 14px;
+    font-family: Arial;
+    text-align: center;
+    line-height: 53px;
+    background-color: #fff;
+    position: relative;
+}
+
+.title .method-close {
+    font-size: 23px;
+    color: rgba(79, 79, 79, 1);
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    margin-top: -12px;
+}
+
+.pay-by-alipay {
+    font-size: 14px;
+    font-family: Arial;
+    text-align: left;
+    line-height: 53px;
+    background-color: #fff;
+}
+
+.pay-by-weixin {
+    font-size: 14px;
+    font-family: Arial;
+    text-align: left;
+    line-height: 53px;
+    background-color: rgba(235, 235, 235, 1);
+}
+
+.submit-order-button {
+    font-size: 14px;
+    color: #af8f39;
+    font-family: Arial;
+    text-align: center;
+    line-height: 53px;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.count-down-container{
+    position: fixed;
+    bottom: 1rem;
+    left:0;
+    width: 100%;
+    height: .35rem;
+    line-height: .35rem;
+    background-color: red;
+    color: white;
+    font-size: .2rem;
+    text-align: center;
+}
+
+.count-down-container .date{
+    color: #f7b415;
+    font-weight: bold;
+}
+
+.spDetailFt {
+    display: flex;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1rem;
+    background-color: #fff;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 .3rem;
+}
+
+.spDetailFt .oldPrice {
+    font-size: .2rem;
+    color: #898989;
+    text-decoration: line-through;
+}
+
+.spDetailFt .price {
+    color: #c50009;
+    font-size: .3rem;
+}
+
+.spDetailFt .gwc {
+    width: 1rem;
+    height: 1rem;
+    position: relative;
+    padding-top: .6rem;
+    color: #898989;
+    text-align: center;
+    font-size: .2rem;
+    /*background: url("../img/icn_jy_spxq_gwc.png") no-repeat center .14rem;
+    background-size: .45rem;*/
+}
+
+.spDetailFt .gwc .num {
+    position: absolute;
+    right: .15rem;
+    top: .1rem;
+    height: .3rem;
+    background-color: #f76d6b;
+    padding: 0 .1rem;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.spDetailBD img {
+    width: 100%;
+    display: block;
+}
+
+.searchBox {
+    width: 100%;
+    height: .9rem;
+    padding: 0 .1rem;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+}
+
+.searchBg {
+    width: 100%;
+    height: .6rem;
+    background-color: #f0eff4;
+    border-radius: .4rem;
+    padding: 0 .3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.searchIpt {
+    background-color: transparent;
+    height: 100%;
+    width: 6rem;
+    outline: none;
+    font-size: .28rem;
+}
+
+.searchBtn {
+    width: .32rem;
+    height: .32rem;
+   /* background: url("../img/btn_jy_cycx_search.png") no-repeat left center;
+    background-size: 100%;*/
+    display: inline-block;
+}
+
+#sqtx {
+    background-color: #f86c6b;
+    height: .4rem;
+    line-height: .38rem;
+    font-size: .24rem;
+    color: #fff;
+    border-radius: 5px;
+    padding: 0 .12rem;
+    position: absolute;
+    right: .15rem;
+    top: .25rem;
+}
+
+.gray {
+    color: #7f7f7f;
+}
+
+.category-page-container {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.category-nav-bar {
+    width: 100%;
+    height: .8rem;
+    background-color: #000;
+    color: white;
+    display: flex;
+    text-align: center;
+    line-height: .8rem;
+}
+
+.category-nav-bar > li {
+    width: 25%;
+}
+
+.good-container {
+    height: 2.5rem;
+    background-color: white;
+    box-sizing: border-box;
+    padding: .3rem 0 0 .2rem;
+    display: flex;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.good-info-container {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.good-img-container {
+    width: 1.8rem;
+}
+
+.good-img-container img {
+    width: 100%;
+}
+
+.good-info-container {
+    margin-left: .2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.good-name {
+    font-size: .3rem;
+}
+
+.good-size {
+    font-size: .2rem;
+    color: #8d8882;
+    margin-bottom: .2rem;
+}
+
+.new-price {
+    color: red;
+    font-size: .3rem;
+}
+
+.old-price {
+    font-size: .2rem;
+    color: #8d8882;
+}
+
+.good-icon-container {
+    margin-top: .1rem;
+}
+
+.jieyue, .miaosha, .xinpin {
+    padding: .06rem .1rem;
+    border-radius: .5rem;
+    margin-right: .1rem;
+}
+
+.jieyue {
+    border: 2px solid #af8f39;
+    color: white;
+    background-color: #af8f39;
+}
+
+.miaosha {
+    border: 2px solid #ed1b23;
+    color: #ed1b23;
+}
+
+.xinpin {
+    border: 2px solid #117700;
+    color: #117700;
+}
+
+.add-cart-icon-container {
+    font-size: .6rem;
+    color: #D3D4D3;
+    margin-right: .2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.introduction-container {
+    font-size: .25rem;
+    box-sizing: border-box;
+    padding: .3rem .16rem;
+    background-color: rgba(255, 255, 255, .6);
+    margin-bottom: .2rem;
+}
+
+.introduction-container p {
+
+}
+
+
+
+
+
+
+
+

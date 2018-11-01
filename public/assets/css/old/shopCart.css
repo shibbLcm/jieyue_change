@@ -1,0 +1,35 @@
+.gwcListBox{
+  width: 100%;
+}
+
+.gwcList{
+  width: 100%;
+  background-color: #fff;
+  height: 2.8rem;
+  border-bottom: 1px solid #d5d5d5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 .17rem;
+}
+
+.gwcList img{
+  width: 2rem;
+  height: 2rem;
+}
+
+.gwcListInfo{
+  width: 3.7rem;
+}
+
+.gliName{
+  line-height: .48rem;
+  color: #6e6e6e;
+  font-size: .28rem;
+  max-height: .96rem;
+  overflow: hidden;
+}
+
+.gliPrice{
+  font-size: .28rem;
+}

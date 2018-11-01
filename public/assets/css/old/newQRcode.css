@@ -1,0 +1,85 @@
+#newQRcode {
+   /*background: url("../img/newQRcodeBg.jpg") no-repeat left bottom;
+  background-size: contain;*/
+  width: 100%;
+  height: 100%;
+}
+
+#newHead {
+  padding: .5rem;
+  align-items: center;
+  font-size: .22rem;
+  color: #595757;
+}
+
+#logo {
+  width: 1.24rem;
+  height: 1.24rem;
+ /* background: url("../img/jy2.png") no-repeat left center;
+  background-size: 100% 100%;*/
+}
+
+#avatar {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: .25rem;
+}
+
+#avatar img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#myName {
+  color: #231815;
+  font-size: .34rem;
+  text-align: center;
+  margin-top: .2rem;
+}
+
+#myCode {
+  font-size: .22rem;
+  color: #595757;
+  text-align: center;
+  margin-top: .1rem;
+}
+
+#bigText {
+  font-size: .6rem;
+  color: #e84f64;
+  margin-top: .3rem;
+  text-align: center;
+}
+
+#qrCodeBox {
+  position: fixed;
+  width: 2.76rem;
+  left: calc(50% - 1.38rem);
+  bottom: .6rem;
+  text-align: center;
+  font-size: .22rem;
+  color: #fff;
+}
+
+#qrCodeMain {
+  width: 2.76rem;
+  height: 2.76rem;
+  background-color: #fff;
+  padding: .3rem;
+  margin-bottom: .3rem;
+}
+
+#myQrCode {
+  width: 100%;
+  height: 100%;
+}
+
+#myQrCode img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}

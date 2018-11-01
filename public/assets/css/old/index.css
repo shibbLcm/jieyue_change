@@ -1,0 +1,77 @@
+.swiperBox {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.swiperBox img {
+  width: 100%;
+  display: block;
+}
+
+.my-bullet {
+  background-color: #f86c6b;
+  opacity: 1;
+}
+
+.alignitem{
+  display: flex;
+  align-items: center;
+  float: left;
+}
+
+.goodMenu{
+  font-size: .22rem;
+  color: #444444;
+}
+
+.indexGoods {
+  margin-top: .15rem;
+  background-color: #fff;
+  padding: 0 .3rem;
+}
+
+.goods {
+  padding: .18rem 0;
+  border-bottom: 1px solid #d1d1d1;
+}
+
+.indexGoods .goods:last-child {
+  border-bottom: none;
+}
+
+.goods img {
+  width: 100%;
+  display: block;
+}
+
+.goodName {
+  font-size: .26rem;
+  color: #444444;
+  line-height: .37rem;
+  margin: .1rem 0;
+}
+
+.goodPrice {
+  font-size: .3rem;
+  font-weight: bold;
+  color: #fd5269;
+  margin-right: .15rem;
+}
+
+.oldPrice {
+  font-size: .22rem;
+  text-decoration: line-through;
+  color: #8d8882;
+}
+
+.goDetail {
+  height: .36rem;
+  line-height: .36rem;
+  background-color: #fd5169;
+  color: #fff;
+  font-size: .22rem;
+  border-radius: .3rem;
+  padding: 0 .2rem;
+  float: right;
+}

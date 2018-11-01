@@ -208,6 +208,8 @@
           display inline-block
           width 70%
           height 100%
+          box-sizing border-box
+          padding-left ex(20)
           .totalPrice
             color red
         .checkout-button
